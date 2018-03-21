@@ -4,6 +4,8 @@ This is an demonstration of updating `NSProgress` as downloads proceed in Object
 
 This was developed in Objective-C on Xcode 9.2 for iOS 11.2. But, the basic ideas are equally applicable for different versions of Objective-C and iOS versions.
 
+This version is based upon [AFNetworking 3.2.0](https://github.com/AFNetworking/AFNetworking).
+
 ## License
 
 Copyright &copy; 2018 Robert Ryan. All rights reserved.
