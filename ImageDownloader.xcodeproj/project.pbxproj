@@ -13,6 +13,9 @@
 		8326E3352062315F004118E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8326E3342062315F004118E7 /* Assets.xcassets */; };
 		8326E3382062315F004118E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8326E3362062315F004118E7 /* LaunchScreen.storyboard */; };
 		8326E33B2062315F004118E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8326E33A2062315F004118E7 /* main.m */; };
+		8326E34320623175004118E7 /* ImageDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 8326E34220623175004118E7 /* ImageDownload.m */; };
+		8326E34620623189004118E7 /* Downloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8326E34520623189004118E7 /* Downloader.m */; };
+		8326E34C206236DF004118E7 /* DownloadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8326E34B206236DF004118E7 /* DownloadCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,13 @@
 		8326E3372062315F004118E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8326E3392062315F004118E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8326E33A2062315F004118E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8326E34120623175004118E7 /* ImageDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownload.h; sourceTree = "<group>"; };
+		8326E34220623175004118E7 /* ImageDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownload.m; sourceTree = "<group>"; };
+		8326E34420623189004118E7 /* Downloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Downloader.h; sourceTree = "<group>"; };
+		8326E34520623189004118E7 /* Downloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Downloader.m; sourceTree = "<group>"; };
+		8326E34A206236DF004118E7 /* DownloadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadCell.h; sourceTree = "<group>"; };
+		8326E34B206236DF004118E7 /* DownloadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadCell.m; sourceTree = "<group>"; };
+		8326E34D20630841004118E7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +52,7 @@
 		8326E31F2062315E004118E7 = {
 			isa = PBXGroup;
 			children = (
+				8326E34D20630841004118E7 /* README.md */,
 				8326E32A2062315F004118E7 /* ImageDownloader */,
 				8326E3292062315F004118E7 /* Products */,
 			);
@@ -62,6 +73,12 @@
 				8326E32C2062315F004118E7 /* AppDelegate.m */,
 				8326E32E2062315F004118E7 /* ViewController.h */,
 				8326E32F2062315F004118E7 /* ViewController.m */,
+				8326E34A206236DF004118E7 /* DownloadCell.h */,
+				8326E34B206236DF004118E7 /* DownloadCell.m */,
+				8326E34420623189004118E7 /* Downloader.h */,
+				8326E34520623189004118E7 /* Downloader.m */,
+				8326E34120623175004118E7 /* ImageDownload.h */,
+				8326E34220623175004118E7 /* ImageDownload.m */,
 				8326E3312062315F004118E7 /* Main.storyboard */,
 				8326E3342062315F004118E7 /* Assets.xcassets */,
 				8326E3362062315F004118E7 /* LaunchScreen.storyboard */,
@@ -143,8 +160,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8326E3302062315F004118E7 /* ViewController.m in Sources */,
+				8326E34320623175004118E7 /* ImageDownload.m in Sources */,
+				8326E34620623189004118E7 /* Downloader.m in Sources */,
 				8326E33B2062315F004118E7 /* main.m in Sources */,
 				8326E32D2062315F004118E7 /* AppDelegate.m in Sources */,
+				8326E34C206236DF004118E7 /* DownloadCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
