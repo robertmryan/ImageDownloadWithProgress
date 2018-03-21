@@ -28,9 +28,9 @@ static const long long kDefaultImageSize = 1000000; // what should we assume for
     [task resume];
 }
 
-- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
+- (void)updateProgressForTotalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
     int64_t totalUnitCount = totalBytesExpectedToWrite;
-
+    
     if (totalBytesExpectedToWrite < totalBytesWritten) {
         if (totalBytesWritten <= 0) {
             totalUnitCount = kDefaultImageSize;
@@ -40,11 +40,17 @@ static const long long kDefaultImageSize = 1000000; // what should we assume for
             totalUnitCount = written / percent;
         }
     }
-
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         self.progress.totalUnitCount = totalUnitCount;
         self.progress.completedUnitCount = totalBytesWritten;
     });
+}
+
+// MARK: - URLSessionDownloadDelegate
+
+- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
+    [self updateProgressForTotalBytesWritten:totalBytesWritten totalBytesExpectedToWrite:totalBytesExpectedToWrite];
 }
 
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location {

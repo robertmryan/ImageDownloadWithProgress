@@ -21,6 +21,15 @@ NS_ASSUME_NONNULL_BEGIN
          filename:(NSString * _Nullable)filename;
 
 /**
+ Update NSProgress
+
+ @param totalBytesWritten Total number of bytes received thus far.
+ @param totalBytesExpectedToWrite Total number of bytes expected (may be -1 if unknown).
+ */
+
+- (void)updateProgressForTotalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite;
+
+/**
  Start download of image.
 
  @param session The NSURLSession upon which this download will be processed.
@@ -28,6 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
  @note The `NSURLSession` is responsible for keeping track of which NSURLSessionTask is associated
     with which ImageDownload, and calling the relevant delegate method.
  */
+
 - (void)startDownloadOnSession:(NSURLSession *)session;
 
 @end
