@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ImageDownload : NSObject <NSURLSessionDownloadDelegate>
+@interface ImageDownload : NSObject
 
 @property (nonatomic, strong) NSURL *url;
 @property (nonatomic, strong) NSString *filename;
@@ -28,17 +28,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 
 - (void)updateProgressForTotalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite;
-
-/**
- Start download of image.
-
- @param session The NSURLSession upon which this download will be processed.
- 
- @note The `NSURLSession` is responsible for keeping track of which NSURLSessionTask is associated
-    with which ImageDownload, and calling the relevant delegate method.
- */
-
-- (void)startDownloadOnSession:(NSURLSession *)session;
 
 @end
 
