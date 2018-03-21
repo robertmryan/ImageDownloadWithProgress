@@ -69,16 +69,10 @@
 		8326E32A2062315F004118E7 /* ImageDownloader */ = {
 			isa = PBXGroup;
 			children = (
-				8326E32B2062315F004118E7 /* AppDelegate.h */,
-				8326E32C2062315F004118E7 /* AppDelegate.m */,
-				8326E32E2062315F004118E7 /* ViewController.h */,
-				8326E32F2062315F004118E7 /* ViewController.m */,
-				8326E34A206236DF004118E7 /* DownloadCell.h */,
-				8326E34B206236DF004118E7 /* DownloadCell.m */,
-				8326E34420623189004118E7 /* Downloader.h */,
-				8326E34520623189004118E7 /* Downloader.m */,
-				8326E34120623175004118E7 /* ImageDownload.h */,
-				8326E34220623175004118E7 /* ImageDownload.m */,
+				8326E35120630923004118E7 /* App Delegate */,
+				8326E34E206308F8004118E7 /* View controllers */,
+				8326E34F20630902004118E7 /* Views */,
+				8326E3502063090E004118E7 /* Downloader */,
 				8326E3312062315F004118E7 /* Main.storyboard */,
 				8326E3342062315F004118E7 /* Assets.xcassets */,
 				8326E3362062315F004118E7 /* LaunchScreen.storyboard */,
@@ -86,6 +80,44 @@
 				8326E33A2062315F004118E7 /* main.m */,
 			);
 			path = ImageDownloader;
+			sourceTree = "<group>";
+		};
+		8326E34E206308F8004118E7 /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8326E32E2062315F004118E7 /* ViewController.h */,
+				8326E32F2062315F004118E7 /* ViewController.m */,
+			);
+			path = "View controllers";
+			sourceTree = "<group>";
+		};
+		8326E34F20630902004118E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8326E34A206236DF004118E7 /* DownloadCell.h */,
+				8326E34B206236DF004118E7 /* DownloadCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8326E3502063090E004118E7 /* Downloader */ = {
+			isa = PBXGroup;
+			children = (
+				8326E34420623189004118E7 /* Downloader.h */,
+				8326E34520623189004118E7 /* Downloader.m */,
+				8326E34120623175004118E7 /* ImageDownload.h */,
+				8326E34220623175004118E7 /* ImageDownload.m */,
+			);
+			path = Downloader;
+			sourceTree = "<group>";
+		};
+		8326E35120630923004118E7 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				8326E32B2062315F004118E7 /* AppDelegate.h */,
+				8326E32C2062315F004118E7 /* AppDelegate.m */,
+			);
+			path = "App Delegate";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
